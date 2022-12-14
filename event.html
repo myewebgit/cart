@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+<body>
+
+    <!-- /// not recommended -->
+    <h1 id="h1"> Event Clicks!!!!!!!!!!</h1>
+    <button onclick="alert()">Click me</button>
+    <button onclick="document.body.style.backgroundColor= 'red'">Click COLOR</button>
+    <button onclick="document.body.style.backgroundColor= 'green'">Click COLOR</button>
+    <button onclick="document.getElementById('h1').style.color= 'red'">Click heading</button>
+    <button onclick="document.getElementById('h1').style.color= 'yellow'">Click </button>
+
+    <!-- //// System #02 -->
+    <button onclick="makeRed()"> Click ME : Red</button>
+    <script>
+        function makeRed(){
+            document.getElementById('h1').style.backgroundColor = 'red';
+        }
+    </script>
+
+    <!-- /////// Direct Short Cut -->
+
+    <button id="light-blue"> Light-Blue</button>
+    <script>
+        document.getElementById("light-blue").addEventListener('click',function(){
+            document.body.style.backgroundColor = 'lightblue'
+        })
+    </script>
+
+<button id="blue"> Title-Blue</button>
+    <script>
+        document.getElementById("blue").addEventListener('click',function(){
+            document.getElementById('h1').style.color = 'orange';
+            document.getElementById('h1').style.backgroundColor = 'black';
+            document.getElementById('h1').style.fontSize = '80px';
+        })
+    </script>
+
+    <p id="Clicking-method"></p>
+    <button id="Direct-handle">Direct</button>
+
+    <script>
+        document.getElementById('Direct-handle').addEventListener('Click',function(){
+            const p = document.getElementById('Clicking-method');
+            p.innerText = 'set by update'
+        })
+    </script>
+
+<button id="text"> Text</button>
+<script>
+    document.getElementById("text").addEventListener('click',function(){
+        document.body.style.backgroundColor = 'aqua';
+    })
+
+
+   
+</script>
+
+<!-- /////////input dpdate -->
+<p id="clicking-method"></p>
+<input id="name-field" type="text">
+<button id="update-name"> Update Input</button>
+
+<script>
+    document.getElementById("update-name").addEventListener('click',function(){
+        const nameField = document.getElementById("name-field");
+        console.log(nameField.value)
+        const p = document.getElementById('clicking-method');
+         p.innerText = nameField.value;
+         document.getElementById("clicking-method").style.backgroundColor = 'red';
+         p.style.fontSize = '50px';
+         nameField.value = '';
+
+    })
+</script>
+</body>
+</html>

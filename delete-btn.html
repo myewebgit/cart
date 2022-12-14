@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete</title>
+</head>
+<body>
+    <h2> Delete Events</h2>
+    <section>
+        <h3 id="secret-info"> very very important section!!!!!</h3>
+        <button id="delete-btn">Delete</button>
+        <input id="name-field" type="text">
+        <button id="Add-btn">Add</button>
+
+    </section>
+
+    <script>
+        document.getElementById('delete-btn').addEventListener('click',function(){
+            document.getElementById('secret-info').style.display = 'none'
+        })
+    </script>
+    <script>
+        document.getElementById('Add-btn').addEventListener('click',function(){
+            const add = document.getElementById('secret-info');
+            // const p = document.getElementById('clicking-method');
+        add.innerText = nameField.value;
+        })
+    </script>
+
+
+<!-- <p id="clicking-method"></p>
+<input id="name-field" type="text">
+<button id="update-name"> Update Input</button>
+
+<script>
+    document.getElementById("update-name").addEventListener('click',function(){
+        const nameField = document.getElementById("name-field");
+        console.log(nameField.value)
+        const p = document.getElementById('clicking-method');
+         p.innerText = nameField.value;
+         document.getElementById("clicking-method").style.backgroundColor = 'red';
+         p.style.fontSize = '50px';
+         nameField.value = '';
+
+    })
+    </script> -->
+</body>
+</html>

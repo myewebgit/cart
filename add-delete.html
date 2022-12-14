@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p id="clicking-method"></p>
+<input id="name-field" type="text">
+<button id="update-name"> Update Input</button>
+<button id="delete"> Delete</button>
+
+<script>
+    document.getElementById("update-name").addEventListener('click',function(){
+        const nameField = document.getElementById("name-field");
+        console.log(nameField.value)
+        const p = document.getElementById('clicking-method');
+         p.innerText = nameField.value;
+         document.getElementById("clicking-method").style.backgroundColor = 'red';
+         p.style.fontSize = '50px';
+         nameField.value = '';
+
+         document.getElementById("delete").addEventListener('click',function(){
+            document.getElementById("clicking-method").style.display = 'none';
+            
+         })
+
+    })
+</script>
+    
+</body>
+</html>
